@@ -1,0 +1,187 @@
+.header
+  font-family: Inter, system-ui
+  font-weight: 400
+  margin: 10px 0 0 0
+  .top_panel
+    display: flex
+    .currency, .location
+      width: 110px
+      align-items: center
+    .currency
+      display: flex
+      margin: 0 10px 0 0
+      .icon
+        width: 15px
+        height: 15px
+        margin: 0 10px 0 0
+      .icon_rub
+        background: $icon_rub center/cover no-repeat
+      .icon_byn
+        background: $icon_byn center/cover no-repeat
+      .icon_amd
+        background: $icon_amd center/cover no-repeat
+    .location
+      display: flex
+      .icon
+        width: 12px
+        height: 19px
+        margin: 0 10px 0 0
+        background: $icon_location center/cover no-repeat
+  .bottom_panel
+    display: flex
+    align-items: center
+    margin-top: 20px
+    .menu-burger
+      width: 47px
+      height: 28px
+      background: $icon_menu-burger center/cover no-repeat
+    .logo
+      font-size: 2.6rem
+      margin-left: 10px
+    .search
+      display: flex
+      align-items: center
+      width: 901px
+      height: 44px
+      margin: 0 50px
+      background: transparent
+      border: 1px solid #0000AA
+      border-radius: 24px
+      transition: width 1s
+      input
+        font-family: Montserrat, system-ui
+        font-weight: 400
+        font-size: 1.14rem
+        width: 100%
+        padding-right: 22px
+        margin-left: 11px
+        background: transparent
+        border: none
+        color: rgba(0, 0, 0, 0.8)
+        &:focus
+          outline: none
+        &::-webkit-search-cancel-button
+          background: $icon_cross center no-repeat
+          background-size: 15px 15px
+          -webkit-appearance: none
+      button
+        width: 22px
+        height: 22px
+        margin-left: 22px
+        background: $icon_magnifying-glass center no-repeat
+        background-size: 22px 22px
+        border: none
+        color: transparent
+    .person, .basket
+      display: flex
+      flex-direction: column
+      align-items: center
+      .icon
+        width: 25px
+        height: 25px
+        margin-bottom: 5px
+        background: $icon_person center/cover no-repeat
+    .basket
+      margin-left: 25px
+      .icon
+        background: $icon_basket center/cover no-repeat
+
+@media(max-width: 1680px)
+  .header
+    .bottom_panel
+      .search
+        width: 660px
+
+@media(max-width: 1539px)
+  .header
+    .top_panel
+      .currency, .location
+        width: 90px
+      .currency
+        .icon
+          width: 11px
+          height: 11px
+          margin: 0 5px 0 0
+      .location
+        .icon
+          width: 8px
+          height: 12px
+          margin: 0 5px 0 0
+
+    .bottom_panel
+      margin-top: 10px
+      .menu-burger
+        width: 34px
+        height: 21px
+      .search
+        width: 570px
+        height: 35px
+        margin: 0 35px
+        button
+          width: 13px
+          height: 13px
+          background-size: 13px 13px
+          margin-left: 14px
+        input
+          padding-right: 11px
+      .person, .basket
+        .icon
+          width: 17px
+          height: 17px
+          margin-bottom: 3px
+      .basket
+        margin-left: 20px
+
+@media(max-width: 1280px)
+  .header
+    .bottom_panel
+      .menu-burger
+        height: 19px
+      .search
+        height: 31px
+@media(max-width: 1189px)
+  .header
+    .top_panel
+      .currency, .location
+        width: 60px
+      .currency
+        .icon
+          width: 10px
+          height: 10px
+      .location
+        .icon
+          width: 7px
+          height: 12px
+    .bottom_panel
+      margin-top: 10px
+      .menu-burger
+        width: 23px
+        height: 14px
+      .logo
+        margin-left: 7px
+      .search
+        width: 400px
+        height: 25px
+        padding-right: 4px
+        margin: 0 20px
+        input
+          padding-right: 0
+        button
+          width: 12px
+          height: 12px
+          background-size: 12px 12px
+          padding-left: 8px
+          margin-left: 11px
+      .person, .basket
+        .icon
+          width: 14px
+          height: 14px
+          margin-bottom: 1px
+      .basket
+        margin-left: 15px
+
+@media(max-width: 830px)
+  .header
+    .bottom_panel
+      .search
+        width: 304px

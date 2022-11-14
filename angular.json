@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/assets/css/screen.css"
             ],
             "scripts": []
           },

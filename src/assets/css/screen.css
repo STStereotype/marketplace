@@ -1,2 +1,312 @@
+/* Core */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  height: 100%;
+  font-size: 14px;
+}
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.9);
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  width: 25px !important;
+  height: 25px !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+@media (max-width: 1539px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1189px) {
+  html {
+    font-size: 8px;
+  }
+}
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  transition: width 1s;
+}
+
+@media (max-width: 1680px) {
+  .wrapper {
+    width: 1200px;
+  }
+}
+@media (max-width: 1539px) {
+  .wrapper {
+    width: 921px;
+  }
+}
+@media (max-width: 1189px) {
+  .wrapper {
+    width: 696px;
+  }
+}
+@media (max-width: 830px) {
+  .wrapper {
+    width: 600px;
+  }
+}
+.header {
+  font-family: Inter, system-ui;
+  font-weight: 400;
+  margin: 10px 0 0 0;
+}
+.header .top_panel {
+  display: flex;
+}
+.header .top_panel .currency, .header .top_panel .location {
+  width: 110px;
+  align-items: center;
+}
+.header .top_panel .currency {
+  display: flex;
+  margin: 0 10px 0 0;
+}
+.header .top_panel .currency .icon {
+  width: 15px;
+  height: 15px;
+  margin: 0 10px 0 0;
+}
+.header .top_panel .currency .icon_rub {
+  background: url("../svg/currency/icon_RUB.svg") center/cover no-repeat;
+}
+.header .top_panel .currency .icon_byn {
+  background: url("../svg/currency/icon_BYN.svg") center/cover no-repeat;
+}
+.header .top_panel .currency .icon_amd {
+  background: url("../svg/currency/icon_AMD.svg") center/cover no-repeat;
+}
+.header .top_panel .location {
+  display: flex;
+}
+.header .top_panel .location .icon {
+  width: 12px;
+  height: 19px;
+  margin: 0 10px 0 0;
+  background: url("../svg/location/icon_location.svg") center/cover no-repeat;
+}
+.header .bottom_panel {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.header .bottom_panel .menu-burger {
+  width: 47px;
+  height: 28px;
+  background: url("../svg/menu/menu-burger.svg") center/cover no-repeat;
+}
+.header .bottom_panel .logo {
+  font-size: 2.6rem;
+  margin-left: 10px;
+}
+.header .bottom_panel .search {
+  display: flex;
+  align-items: center;
+  width: 901px;
+  height: 44px;
+  margin: 0 50px;
+  background: transparent;
+  border: 1px solid #0000AA;
+  border-radius: 24px;
+  transition: width 1s;
+}
+.header .bottom_panel .search input {
+  font-family: Montserrat, system-ui;
+  font-weight: 400;
+  font-size: 1.14rem;
+  width: 100%;
+  padding-right: 22px;
+  margin-left: 11px;
+  background: transparent;
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+.header .bottom_panel .search input:focus {
+  outline: none;
+}
+.header .bottom_panel .search input::-webkit-search-cancel-button {
+  background: url("../svg/menu/cross.svg") center no-repeat;
+  background-size: 15px 15px;
+  -webkit-appearance: none;
+}
+.header .bottom_panel .search button {
+  width: 22px;
+  height: 22px;
+  margin-left: 22px;
+  background: url("../svg/menu/magnifying-glass.svg") center no-repeat;
+  background-size: 22px 22px;
+  border: none;
+  color: transparent;
+}
+.header .bottom_panel .person, .header .bottom_panel .basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .bottom_panel .person .icon, .header .bottom_panel .basket .icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+  background: url("../svg/menu/person.svg") center/cover no-repeat;
+}
+.header .bottom_panel .basket {
+  margin-left: 25px;
+}
+.header .bottom_panel .basket .icon {
+  background: url("../svg/menu/basket.svg") center/cover no-repeat;
+}
+
+@media (max-width: 1680px) {
+  .header .bottom_panel .search {
+    width: 660px;
+  }
+}
+@media (max-width: 1539px) {
+  .header .top_panel .currency, .header .top_panel .location {
+    width: 90px;
+  }
+  .header .top_panel .currency .icon {
+    width: 11px;
+    height: 11px;
+    margin: 0 5px 0 0;
+  }
+  .header .top_panel .location .icon {
+    width: 8px;
+    height: 12px;
+    margin: 0 5px 0 0;
+  }
+  .header .bottom_panel {
+    margin-top: 10px;
+  }
+  .header .bottom_panel .menu-burger {
+    width: 34px;
+    height: 21px;
+  }
+  .header .bottom_panel .search {
+    width: 570px;
+    height: 35px;
+    margin: 0 35px;
+  }
+  .header .bottom_panel .search button {
+    width: 13px;
+    height: 13px;
+    background-size: 13px 13px;
+    margin-left: 14px;
+  }
+  .header .bottom_panel .search input {
+    padding-right: 11px;
+  }
+  .header .bottom_panel .person .icon, .header .bottom_panel .basket .icon {
+    width: 17px;
+    height: 17px;
+    margin-bottom: 3px;
+  }
+  .header .bottom_panel .basket {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1280px) {
+  .header .bottom_panel .menu-burger {
+    height: 19px;
+  }
+  .header .bottom_panel .search {
+    height: 31px;
+  }
+}
+@media (max-width: 1189px) {
+  .header .top_panel .currency, .header .top_panel .location {
+    width: 60px;
+  }
+  .header .top_panel .currency .icon {
+    width: 10px;
+    height: 10px;
+  }
+  .header .top_panel .location .icon {
+    width: 7px;
+    height: 12px;
+  }
+  .header .bottom_panel {
+    margin-top: 10px;
+  }
+  .header .bottom_panel .menu-burger {
+    width: 23px;
+    height: 14px;
+  }
+  .header .bottom_panel .logo {
+    margin-left: 7px;
+  }
+  .header .bottom_panel .search {
+    width: 400px;
+    height: 25px;
+    padding-right: 4px;
+    margin: 0 20px;
+  }
+  .header .bottom_panel .search input {
+    padding-right: 0;
+  }
+  .header .bottom_panel .search button {
+    width: 12px;
+    height: 12px;
+    background-size: 12px 12px;
+    padding-left: 8px;
+    margin-left: 11px;
+  }
+  .header .bottom_panel .person .icon, .header .bottom_panel .basket .icon {
+    width: 14px;
+    height: 14px;
+    margin-bottom: 1px;
+  }
+  .header .bottom_panel .basket {
+    margin-left: 15px;
+  }
+}
+@media (max-width: 830px) {
+  .header .bottom_panel .search {
+    width: 304px;
+  }
+}
 /*# sourceMappingURL=screen.css.map */
