@@ -1,23 +1,35 @@
-html
+html, body
   height: 100%
   font-size: 14px
 *
+  font-family: Inter, system-ui
+  font-weight: 400
   box-sizing: border-box
   padding: 0
   margin: 0
   letter-spacing: 0.02em
-  color: rgba(0, 0, 0, 0.9)
-
+  color: $color_black
+  main
+    flex: 1 0 auto
   &:before, &:after
     box-sizing: inherit
+
 input[type="search"]::-webkit-search-cancel-button
-  width: 25px !important
-  height: 25px !important
-  color: rgba(0, 0, 0, 0.8) !important
+  width: 15px
+  height: 15px
+  color: rgba(0, 0, 0, 0.8)
+
+.layout_wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100vh
 
 @media(max-width: 1539px)
   html
     font-size: 11px
+  input[type="search"]::-webkit-search-cancel-button
+    width: 10px
+    height: 10px
 
 @media(max-width: 1280px)
   html
@@ -26,3 +38,11 @@ input[type="search"]::-webkit-search-cancel-button
 @media(max-width: 1189px)
   html
     font-size: 8px
+  input[type="search"]::-webkit-search-cancel-button
+    width: 7px
+    height: 7px
+
+@media(max-width: 830px)
+  input[type="search"]::-webkit-search-cancel-button
+    width: 6px
+    height: 6px

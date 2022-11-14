@@ -1,19 +1,19 @@
 .header
-  font-family: Inter, system-ui
-  font-weight: 400
+  flex: 1 0 auto
   margin: 10px 0 0 0
   .top_panel
     display: flex
     .currency, .location
-      width: 110px
       align-items: center
+      cursor: pointer
     .currency
       display: flex
-      margin: 0 10px 0 0
+      margin: 0 100px 0 0
       .icon
         width: 15px
         height: 15px
         margin: 0 10px 0 0
+        cursor: pointer
       .icon_rub
         background: $icon_rub center/cover no-repeat
       .icon_byn
@@ -27,6 +27,7 @@
         height: 19px
         margin: 0 10px 0 0
         background: $icon_location center/cover no-repeat
+        cursor: pointer
   .bottom_panel
     display: flex
     align-items: center
@@ -35,9 +36,11 @@
       width: 47px
       height: 28px
       background: $icon_menu-burger center/cover no-repeat
+      cursor: pointer
     .logo
       font-size: 2.6rem
       margin-left: 10px
+      cursor: pointer
     .search
       display: flex
       align-items: center
@@ -45,9 +48,10 @@
       height: 44px
       margin: 0 50px
       background: transparent
-      border: 1px solid #0000AA
+      border: 1px solid $color_dark-blue
       border-radius: 24px
       transition: width 1s
+      cursor: pointer
       input
         font-family: Montserrat, system-ui
         font-weight: 400
@@ -58,6 +62,7 @@
         background: transparent
         border: none
         color: rgba(0, 0, 0, 0.8)
+        cursor: pointer
         &:focus
           outline: none
         &::-webkit-search-cancel-button
@@ -72,10 +77,12 @@
         background-size: 22px 22px
         border: none
         color: transparent
+        cursor: pointer
     .person, .basket
       display: flex
       flex-direction: column
       align-items: center
+      cursor: pointer
       .icon
         width: 25px
         height: 25px
@@ -91,6 +98,8 @@
     .bottom_panel
       .search
         width: 660px
+        input
+          margin-right: 13px
 
 @media(max-width: 1539px)
   .header
@@ -165,7 +174,7 @@
         padding-right: 4px
         margin: 0 20px
         input
-          padding-right: 0
+          padding-right: 5px
         button
           width: 12px
           height: 12px
